@@ -39,3 +39,19 @@ O sistema é construído com base nas seguintes entidades:
     * `users`: Lista dos usuários que pertencem à empresa.
 
 ---
+
+#### Funções da API
+
+**Cadastro de Company** – Ao criar uma company, é gerado automaticamente um usuário com a regra de superuser.
+
+**Autorização** – Usuário realiza login enviando suas credenciais e recebe um JWT como resposta.
+
+**Autenticação** – Para acessar recursos, o usuário envia o JWT em cada requisição; a API valida o token e autoriza ou nega o acesso.
+
+**Recuperação de Senha** (função interna – apenas superuser).
+
+**Cadastro de Usuário vinculado a uma Company** – Possibilidade de criar usuários com diferentes perfis (ex.: usuário padrão) (função interna – apenas superuser).
+
+**Atualização de Usuário** (função interna – apenas superuser).
+
+**Exclusão de Usuário** (função interna – apenas superuser).

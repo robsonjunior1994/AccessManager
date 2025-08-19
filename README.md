@@ -42,7 +42,7 @@ O sistema é construído com base nas seguintes entidades:
 
 #### Funções da API
 
-**Cadastro de Usuário** – Ao criar um User, é gerado automaticamente um uma company e esse usuário tem a regra de superuser dessa company.
+**Cadastro de Usuário** – Ao criar um User, será solicitado a criação de um uma company e esse usuário tem a regra de superuser dessa company.
 
 **Autorização** – Usuário realiza login enviando suas credenciais e recebe um JWT como resposta.
 

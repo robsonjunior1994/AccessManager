@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessManager.Api", "Access
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessManager.Web", "..\AcessManager.Web\AcessManager.Web.csproj", "{5B358E6B-2473-4434-8006-60380A059FB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessManager.Tests", "..\AcessManager.Tests\AcessManager.Tests.csproj", "{971A0EA7-5669-40F2-8125-2F6FB2350168}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5B358E6B-2473-4434-8006-60380A059FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B358E6B-2473-4434-8006-60380A059FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B358E6B-2473-4434-8006-60380A059FB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971A0EA7-5669-40F2-8125-2F6FB2350168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971A0EA7-5669-40F2-8125-2F6FB2350168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971A0EA7-5669-40F2-8125-2F6FB2350168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971A0EA7-5669-40F2-8125-2F6FB2350168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

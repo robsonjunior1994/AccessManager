@@ -11,8 +11,8 @@ O **AccessManager** é uma solução centralizada para gerenciar a autenticaçã
 O principal objetivo do AccessManager é **garantir a segurança e o controle de acesso**. Ao centralizar o gerenciamento de usuários e permissões, a aplicação:
 
 * **Reduz o tempo de desenvolvimento:** Reutilize um sistema de autenticação e autorização completo em vez de recriá-lo.
-* **Melhora a segurança:** Um sistema unificado é mais fácil de manter, auditar e proteger contra vulnerabilidades.
-* **Simplifica a gestão de usuários:** Gerencie usuários, empresas e permissões em um único lugar.
+* **Melhora a segurança:** Como é um sistema focado nessa função, ao desenvolve-lo, estou colocando mais empenho em um objetivo apenas.
+* **Simplifica a gestão de usuários:** Posso gerenciar os usuários de várias aplicações ou apenas retutilizar ele em cada projeto.
 
 ---
 

@@ -2,7 +2,7 @@
 
 #### O que é o AccessManager?
 
-O **AccessManager** é uma solução centralizada para gerenciar a autenticação e autorização de usuários em diversas aplicações. A ideia é eliminar a necessidade de construir um sistema de gerenciamento de usuários do zero para cada novo projeto. Com o AccessManager, você terá uma base robusta e reutilizável para controlar quem pode acessar recursos específicos de qualquer aplicação.
+O **AccessManager** é uma solução centralizada para gerenciar a autenticação e autorização de usuários em diversas aplicações. A ideia é eliminar a necessidade de construir um sistema de gerenciamento de usuários do zero para cada novo projeto. Com o AccessManager, eu posso reutilizar para controlar quem pode acessar recursos específicos de qualquer aplicação.
 
 ---
 

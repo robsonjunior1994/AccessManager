@@ -16,6 +16,6 @@ namespace AccessManager.Api.DTOs
         [StringLength(100, MinimumLength = 6)]
         public string Password { get; set; }
         [Required]
-        public CompanyDTO companyDTO { get; set; }
+        public CompanyDTO CompanyDTO { get; set; }
     }
 }

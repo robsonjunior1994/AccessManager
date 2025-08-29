@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using AccessManager.Api.Services.Interface;
+using System.Security.Cryptography;
 
 namespace AccessManager.Api.Services
 {

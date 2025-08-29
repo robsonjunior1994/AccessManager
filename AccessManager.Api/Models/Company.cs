@@ -1,0 +1,13 @@
+﻿namespace AccessManager.Api.Models
+{
+    public class Company
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Number { get; set; }
+        public string DateCreated { get; set; }
+        public string DateUpdated { get; set; }
+        public bool IsActive { get; set; }
+        public List<User> Users { get; set; }
+    }
+}

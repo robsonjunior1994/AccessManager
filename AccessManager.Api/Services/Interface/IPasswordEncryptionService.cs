@@ -1,4 +1,4 @@
-﻿namespace AccessManager.Api.Services
+﻿namespace AccessManager.Api.Services.Interface
 {
     public interface IEncryptionPasswordService
     {

@@ -2,7 +2,7 @@
 
 namespace AccessManager.Api.Services
 {
-    public class ServicePasswordEncryption : IServiceEncryptionPassword
+    public class PasswordEncryptionService : IEncryptionPasswordService
     {
         private const int HashSize = 32;
         private const int SaltSize = 16;

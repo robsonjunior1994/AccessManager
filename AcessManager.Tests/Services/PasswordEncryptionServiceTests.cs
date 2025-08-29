@@ -2,14 +2,14 @@ using AccessManager.Api.Services;
 
 namespace AcessManager.Tests.Services
 {
-    public class ServicePasswordEncryptionTests
+    public class PasswordEncryptionServiceTests
     {
-        private readonly ServicePasswordEncryption _service;
+        private readonly PasswordEncryptionService _service;
 
-        public ServicePasswordEncryptionTests()
+        public PasswordEncryptionServiceTests()
         {
             // Arrange comum para todos os testes
-            _service = new ServicePasswordEncryption();
+            _service = new PasswordEncryptionService();
         }
 
         [Fact]

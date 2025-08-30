@@ -15,9 +15,9 @@ namespace AccessManager.Api.Services.Interface
             _userRepository = userRepository;
             _encryptionPasswordService = encryptionPasswordService;
         }
-        public Result<User> Create(UserDTO userDTO)
+        public async Task<Result<User>> Create(UserDTO userDTO)
         {
-            var user = _userRepository.GetByEmail(userDTO.Email);
+            var user = await _userRepository.GetByEmail(userDTO.Email);
             if (user != null)
                 return Result<User>.Failure("User already exist", ErrorCode.USER_ALREADY_EXISTS);
 
@@ -48,7 +48,7 @@ namespace AccessManager.Api.Services.Interface
 
             try
             {
-                _userRepository.Create(newUser);
+                await _userRepository.Create(newUser);
                 return Result<User>.Success(newUser);
             }
             catch (Exception ex)

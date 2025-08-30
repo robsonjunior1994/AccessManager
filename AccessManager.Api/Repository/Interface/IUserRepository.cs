@@ -4,8 +4,8 @@ namespace AccessManager.Api.Repository.Interface
 {
     public interface IUserRepository
     {
-        public bool Create(User user);
-        public User GetByEmail(string email);
+        public Task Create(User user);
+        public Task<User> GetByEmail(string email);
 
     }
 }

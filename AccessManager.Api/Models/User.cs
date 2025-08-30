@@ -1,4 +1,5 @@
 ﻿using AccessManager.Api.DTOs;
+using System.Text.Json.Serialization;
 
 namespace AccessManager.Api.Models
 {
@@ -12,6 +13,8 @@ namespace AccessManager.Api.Models
         public DateTime UpdatedAt { get; set; }
         public bool IsActive { get; set; }
         public List<string> Roles { get; set; }
+        public int CompanyId { get; set; }
+        [JsonIgnore]
         public Company Company { get; set; }
     }
 }

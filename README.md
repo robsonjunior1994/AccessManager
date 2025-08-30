@@ -55,3 +55,11 @@ O sistema é construído com base nas seguintes entidades:
 **Atualização de Usuário** (função interna – apenas superuser).
 
 **Exclusão de Usuário** (função interna – apenas superuser).
+
+#### Comandos
+
+**Para rodar a migração inicial:**
+
+dotnet ef migrations add InicialMigration --project ../AccessManager.Api --startup-project ../AccessManager.Api --output-dir ../AccessManager.Api/Data/Migrations
+
+dotnet ef database update --project ../AccessManager.Api --startup-project ../AccessManager.Api

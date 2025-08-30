@@ -18,7 +18,7 @@ namespace AccessManager.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateUser([FromBody] UserDTO userDTO)
+        public async Task<IActionResult> CreateUser([FromBody] UserDTO userDTO)
         {
             ResponseDTO response = new ResponseDTO();
 
@@ -29,7 +29,7 @@ namespace AccessManager.Api.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest, response);
             }
             
-            Result<User> result = _userService.Create(userDTO);
+            Result<User> result = await _userService.Create(userDTO);
 
             if(!result.IsSuccess)
             {

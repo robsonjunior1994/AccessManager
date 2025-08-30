@@ -1,18 +1,35 @@
-﻿using AccessManager.Api.Models;
+﻿using AccessManager.Api.Data;
+using AccessManager.Api.Models;
 using AccessManager.Api.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace AccessManager.Api.Repository
 {
     public class UserRepository : IUserRepository
     {
-        public bool Create(User user)
+        private readonly ApplicationDbContext _context;
+        public UserRepository(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task Create(User user)
+        {
+            try
+            {
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                // Log do erro aqui
+                throw;
+            }
         }
 
-        public User GetByEmail(string email)
+        public async Task<User?> GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == email);
         }
     }
 }

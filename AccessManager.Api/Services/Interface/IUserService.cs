@@ -6,6 +6,6 @@ namespace AccessManager.Api.Services.Interface
 {
     public interface IUserService
     {
-        public Result<User> Create(UserDTO userDTO);
+        public Task<Result<User>> Create(UserDTO userDTO);
     }
 }

@@ -10,5 +10,13 @@ namespace AccessManager.Api.DTOs
 
         [Required]
         public string Number { get; set; }
+
+        public CompanyDTO() { }
+        public CompanyDTO(Models.Company company)
+        {
+            Id = company.Id;
+            Name = company.Name;
+            Number = company.Number;
+        }
     }
 }

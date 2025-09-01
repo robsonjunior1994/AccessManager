@@ -39,7 +39,9 @@ namespace AccessManager.Api.Controllers
                 return StatusCode(statusCode, response);
             }
 
-            response.IsSucess("User created successfully.", StatusCodes.Status201Created.ToString(), result.Data);
+            UserDTO reponseUser = new UserDTO(result.Data);
+
+            response.IsSucess("User created successfully.", StatusCodes.Status201Created.ToString(), reponseUser);
 
             return StatusCode(StatusCodes.Status201Created, response);
         }

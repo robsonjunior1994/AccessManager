@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AccessManager.Api.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace AccessManager.Api.DTOs
 {
@@ -17,5 +18,18 @@ namespace AccessManager.Api.DTOs
         public string Password { get; set; }
         [Required]
         public CompanyDTO CompanyDTO { get; set; }
+
+        public UserDTO()
+        {
+            CompanyDTO = new CompanyDTO();
+        }
+
+        public UserDTO(User user)
+        {
+            Id = user.Id;
+            Name = user.Name;
+            Email = user.Email;
+            CompanyDTO = new CompanyDTO(user.Company);
+        }
     }
 }

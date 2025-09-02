@@ -3,6 +3,7 @@ using AccessManager.Api.DTOs;
 using AccessManager.Api.Models;
 using AccessManager.Api.Repository.Interface;
 using AccessManager.Api.Services.Interface;
+using Microsoft.OpenApi.Any;
 using Moq;
 
 namespace AccessManager.Api.Tests.Services
@@ -51,9 +52,11 @@ namespace AccessManager.Api.Tests.Services
             var result = await _userService.Create(userDto);
 
             // Assert
+            _userRepositoryMock.Verify(repo => repo.Create(It.IsAny<User>()), Times.Never);
             Assert.False(result.IsSuccess);
             Assert.Equal("User already exist", result.ErrorMessage);
             Assert.Equal(ErrorCode.USER_ALREADY_EXISTS, result.ErrorCode);
+            
         }
 
         [Fact]

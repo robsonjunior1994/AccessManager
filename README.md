@@ -55,3 +55,22 @@ O sistema é construído com base nas seguintes entidades:
 **Atualização de Usuário** (função interna – apenas superuser).
 
 **Exclusão de Usuário** (função interna – apenas superuser).
+
+#### Comandos
+
+**Para rodar a migração inicial:**
+
+dotnet ef migrations add InicialMigration --project ../AccessManager.Api --startup-project ../AccessManager.Api --output-dir ../AccessManager.Api/Data/Migrations
+
+dotnet ef database update --project ../AccessManager.Api --startup-project ../AccessManager.Api
+
+
+**Para rodar localmente o RabbiMQ:**
+docker run -d --name rabbitmq-container -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=Senha123! rabbitmq:3-management
+
+acessar: http://localhost:15672
+
+**Para rodar localmente o SQL Server:**
+
+docker pull mysql:8.0
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=Senha123! -e MYSQL_DATABASE=AccessManagerDB -p 3306:3306 -d mysql:8.0

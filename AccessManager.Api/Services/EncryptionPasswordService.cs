@@ -1,8 +1,9 @@
-﻿using System.Security.Cryptography;
+﻿using AccessManager.Api.Services.Interface;
+using System.Security.Cryptography;
 
 namespace AccessManager.Api.Services
 {
-    public class PasswordEncryptionService : IEncryptionPasswordService
+    public class EncryptionPasswordService : IEncryptionPasswordService
     {
         private const int HashSize = 32;
         private const int SaltSize = 16;

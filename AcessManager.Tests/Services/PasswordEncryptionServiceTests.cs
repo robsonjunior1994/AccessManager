@@ -4,12 +4,12 @@ namespace AcessManager.Tests.Services
 {
     public class PasswordEncryptionServiceTests
     {
-        private readonly PasswordEncryptionService _service;
+        private readonly EncryptionPasswordService _service;
 
         public PasswordEncryptionServiceTests()
         {
             // Arrange comum para todos os testes
-            _service = new PasswordEncryptionService();
+            _service = new EncryptionPasswordService();
         }
 
         [Fact]
